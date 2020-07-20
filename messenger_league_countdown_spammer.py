@@ -4,7 +4,7 @@
 WARNING: I'm not responsible for any damage that may happen to your account! Proceed at your own risk!
 Author: Gerry Saporito
 Built with: PYTHON 3.6.7
-github: ??
+github: https://github.com/gksapori/shenanigans
 """
 
 import time
@@ -13,7 +13,6 @@ import fbchat
 from fbchat.models import *
 from getpass import getpass 
 
-# Ask user for message and spam count
 print("WARNING: I'm not responsible for any damage that may happen to your account! Proceed at your own risk!\n" +
 	"To be on the safe side make a fake account for sites like FB.")
 print("-" * 100)
@@ -40,8 +39,6 @@ while failed == True:
 		failed = False
 	except:
 		print("Incorrect group chat name: " + name)
-
-# message = input("Message (leave empty for default message): ")
 
 if message == "":
 	message = "Hey summoners!!! This is a friendly reminder: the next time we will be on the rift will be in approximately %d hrs."
