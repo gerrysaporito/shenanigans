@@ -1,7 +1,11 @@
 /*
  * This script scrapes internships from HTML on a site.
  * To use, copy and paste this code into the javscript console.
- * A .txt file with all of the internship information will be downloaded after the scrape is done.
+ * Two .txt files will be downloaded after the scrape is done:
+ *     - All internship information
+ *     - Only internship company names
+ * The txt file with only internship company names is intended to delete after copying and pasting into spreadsheet or notion, 
+ * whichever is used to organize jobs you want to apply to or want to keep more information on!
  */
 
 const WAIT_TIME = 2000; // Value in ms, suggested value is 4000 to allow page to fully load
