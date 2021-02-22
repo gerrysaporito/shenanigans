@@ -5,7 +5,8 @@
  */
 
 const WAIT_TIME = 2000; // Value in ms, suggested value is 4000 to allow page to fully load
-const DOWNLOAD_FILE_NAME = "scraped_internships.txt"
+const DOWNLOAD_FILE_NAME = `scraped_internships_${(new Date().toLocaleDateString()).toISOString}.txt`;
+const DOWNLOAD_FILE_NAME_KEYS = `scraped_internships_company_names_${(new Date().toLocaleDateString()).toISOString}.txt`;
 
 /*
  * Wait function to prevent next line to run until time has passed.
@@ -145,6 +146,8 @@ const init = async () => {
 
     await download(DOWNLOAD_FILE_NAME, JSON.stringify(internships));
     await wait(WAIT_TIME);
+    await download(DOWNLOAD_FILE_NAME_KEYS, JSON.stringify(Object.keys(internships)));
+    await wait(WAIT_TIME);
 
     console.log("Download completed.")
 
@@ -154,3 +157,8 @@ const init = async () => {
 }
 
 await init();
+
+
+
+
+
