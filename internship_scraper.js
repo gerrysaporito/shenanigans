@@ -5,8 +5,9 @@
  */
 
 const WAIT_TIME = 2000; // Value in ms, suggested value is 4000 to allow page to fully load
-const DOWNLOAD_FILE_NAME = `scraped_internships_${(new Date().toLocaleDateString()).toISOString}.txt`;
-const DOWNLOAD_FILE_NAME_KEYS = `scraped_internships_company_names_${(new Date().toLocaleDateString()).toISOString}.txt`;
+const CURR_DATE = (new Date().toLocaleDateString()).replaceAll("/", "-");
+const DOWNLOAD_FILE_NAME = `Scraped Internships (${CURR_DATE}).txt`;
+const DOWNLOAD_FILE_NAME_KEYS = `Scraped Internships Company Names (${CURR_DATE}).txt`;
 
 /*
  * Wait function to prevent next line to run until time has passed.
